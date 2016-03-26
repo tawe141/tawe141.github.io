@@ -1,4 +1,4 @@
-import time
+import json
 
 
 def find_collatz(n):
@@ -15,13 +15,12 @@ def collatz_dict(n):
     obj = {}
     for i in range(1,n):
         obj[i] = find_collatz(i)
-        # print('Finish i=' + str(i))
     return obj
 
-t0 = time.clock()
-for x in range(10):
-    collatz_dict(5000)
-t1 = time.clock()
-avg = (t1 - t0) / 10
-
-print('Average time taken = ' + str(avg))
+if __name__ == '__main__':
+    # n = int(input("Enter number of iterations: "))
+    n = 100
+    data = collatz_dict(n)
+    data_vals = data.values()
+    data_union = set().union(*data_vals)
+    print data_union
