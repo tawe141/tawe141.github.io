@@ -17,10 +17,22 @@ def collatz_dict(n):
         obj[i] = find_collatz(i)
     return obj
 
+
+def find_links(dataset, nodes):
+    links = []
+    for i in range(1, len(nodes)):
+        links.append({'source': dataset.index(nodes[i]), 'target': dataset.index(nodes[i-1])})
+    return links
+
 if __name__ == '__main__':
     # n = int(input("Enter number of iterations: "))
     n = 100
-    data = collatz_dict(n)
-    data_vals = data.values()
-    data_union = set().union(*data_vals)
-    print data_union
+    collatzes = collatz_dict(n+1)
+    data_union = list(set().union(*collatzes.values()))
+    # print nodes
+    # print(find_links(data_union, collatzes[3]))
+    links = []
+    for collatz in collatzes.values():
+        links.append(find_links(data_union, collatz))
+    # print links
+    print set().union(*links)
