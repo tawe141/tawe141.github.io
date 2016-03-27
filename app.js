@@ -16,5 +16,6 @@ loadJSON(function(response) {
     var data = JSON.parse(response);
     var nodes = data.nodes;
     var links = data.links;
-    console.log(data)
+    console.log(nodes)
+    console.log(links)
 })
