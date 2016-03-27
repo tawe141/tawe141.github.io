@@ -58,7 +58,7 @@ if __name__ == '__main__':
     # Output to data.json file, which will be imported by app.js
     to_json = {
         'nodes': data_union,
-        'links': links
+        'edges': links
     }
     with open('data.json', 'w') as output:
         json.dump(to_json, output, indent=4, separators=(',',':'))
