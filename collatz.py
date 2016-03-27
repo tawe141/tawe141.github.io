@@ -48,6 +48,7 @@ if __name__ == '__main__':
 
     # Get list of nodes with no repeats
     data_union = list(set().union(*collatzes.values()))
+    nodes = [{'name': str(x)} for x in data_union]
 
     # Find links between all nodes given the set of Collatz sequences
     links = find_all_links(data_union, *collatzes.values())
@@ -57,7 +58,7 @@ if __name__ == '__main__':
 
     # Output to data.json file, which will be imported by app.js
     to_json = {
-        'nodes': data_union,
+        'nodes': nodes,
         'edges': links
     }
     with open('data.json', 'w') as output:
