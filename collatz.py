@@ -18,21 +18,22 @@ def collatz_dict(n):
     return obj
 
 
-def find_links(dataset, nodes):
-    links = []
-    for i in range(1, len(nodes)):
-        links.append({'source': dataset.index(nodes[i]), 'target': dataset.index(nodes[i-1])})
-    return links
+def find_all_links(dataset, *nodes):
+    result = []
+    for node_set in nodes:
+        for i in range(1, len(node_set)):
+            result.append({'source': dataset.index(node_set[i]), 'target': dataset.index(node_set[i-1])})
+    return result
 
 if __name__ == '__main__':
     # n = int(input("Enter number of iterations: "))
     n = 100
     collatzes = collatz_dict(n+1)
     data_union = list(set().union(*collatzes.values()))
-    # print nodes
-    # print(find_links(data_union, collatzes[3]))
-    links = []
-    for collatz in collatzes.values():
-        links.append(find_links(data_union, collatz))
-    # print links
-    print set().union(*links)
+    links = find_all_links(data_union, *collatzes.values())
+    to_json = {
+        'nodes': data_union,
+        'links': links
+    }
+    with open('data.json', 'w') as output:
+        json.dump(to_json, output, indent=4, separators=(',',':'))
