@@ -41,8 +41,7 @@ def find_all_links(dataset, *nodes):
     return result
 
 if __name__ == '__main__':
-    # n = int(input("Enter number of iterations: "))
-    n = 500
+    n = int(input("Enter number of iterations: "))
 
     # Find all nodes given n
     collatzes = collatz_dict(n+1)
