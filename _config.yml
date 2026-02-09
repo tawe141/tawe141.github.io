@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Eric Taw"
+title                    : "Eric Taw, PhD"
 title_separator          : "-"
 name                     : &name "Eric Taw"
 description              : &description "Eric Taw's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -23,7 +23,7 @@ repository               : "tawe141/tawe141.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Eric Taw, PhD"
   pronouns         : # example: "she/her"  
   bio              : "Research scientist at MITLL working on AI for material science, chem., and bio. applications"
