@@ -1,8 +1,9 @@
 ---
 permalink: /
 title: "About Me"
+description: "Eric Taw, PhD — research scientist at MIT Lincoln Laboratory working on AI and computational chemistry for materials discovery."
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---

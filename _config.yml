@@ -144,13 +144,16 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_description           : "Eric Taw, PhD — research scientist at MIT Lincoln Laboratory working on AI and computational chemistry for materials discovery."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : "Person"
+  name                   : "Eric Taw"
+  links:
+    - "https://scholar.google.com/citations?hl=en&user=dmcUY1IAAAAJ"
+    - "https://github.com/tawe141"
+    - "https://www.linkedin.com/in/erictaw"
 
 
 # Analytics
@@ -166,6 +169,7 @@ include:
   - _pages
   - files
 exclude:
+  - talkmap
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache

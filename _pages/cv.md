@@ -1,6 +1,7 @@
 ---
 layout: archive
 title: "CV"
+description: "Curriculum vitae of Eric Taw, PhD — education, work experience, and awards in AI, computational chemistry, and materials science."
 permalink: /cv/
 author_profile: true
 redirect_from:
